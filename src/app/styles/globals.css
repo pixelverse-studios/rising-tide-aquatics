@@ -1,0 +1,92 @@
+/* @import './reset.css'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #3b5070;
+    --secondary: #629bc5;
+    --accent: #ee272a;
+
+    --white: #f9fcff;
+    --black: #5a5a5a;
+    --border-radius: 8px;
+
+    --max-width: 1400px;
+
+    /* shadcn ish */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 8px;
+}
+
+html,
+body {
+    height: 100dvh;
+    min-height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    height: 100%;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold;
+    }
+    h2 {
+        @apply text-2xl font-semibold;
+    }
+    h3 {
+        @apply text-xl font-semibold;
+    }
+    h4 {
+        @apply text-lg font-bold;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        font-family: 'Poppins', serif;
+        @apply bg-background text-black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
