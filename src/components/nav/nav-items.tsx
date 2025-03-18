@@ -42,7 +42,10 @@ export default function NavItems({
                                 block: 'start'
                             })
                         }
-                        className="block py-1 transition-colors duration-300 ease-in-out"
+                        className={cn(
+                            'block py-1 transition-scale duration-300 ease-in-out',
+                            footer ? 'hover:scale-125' : ''
+                        )}
                     >
                         {item.label}
                     </Link>

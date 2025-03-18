@@ -6,8 +6,14 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 import { DialogTitle } from '@/components/ui/dialog'
 
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue
+} from '@/components/ui/select'
 import {
     Form,
     FormControl,
@@ -16,6 +22,7 @@ import {
     FormLabel,
     FormMessage
 } from '@/components/ui/form'
+import { ripple, breakers, surges, tsunami } from '@/lib/teams'
 
 const formSchema = z.object({
     fullname: z.string().min(2, 'Full Name must be at least 2 characters'),
@@ -74,29 +81,8 @@ export default function ContactForm({
     }
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 shadow-xl">
-            <div className="bg-primary text-white p-6 flex flex-col space-y-4 rounded-tl-lg rounded-bl-lg">
-                <DialogTitle className="text-2xl font-bold text-white">
-                    Get in Touch
-                </DialogTitle>
-                <p>
-                    We're here to answer your questions and discuss how we can
-                    help you and your loved ones.
-                </p>
-                <div className="flex items-center space-x-2">
-                    <Phone className="w-5 h-5" />
-                    <span>(555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <Mail className="w-5 h-5" />
-                    <span>contact@360degreecare.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5" />
-                    <span>27 Chestnut St, Ridgewood, NJ 07450</span>
-                </div>
-            </div>
-            <div className="p-6 bg-white-bright rounded-tr-lg rounded-br-lg">
+        <div>
+            <div className="p-6 bg-white-bright rounded-lg shadow-xl">
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
@@ -157,14 +143,38 @@ export default function ContactForm({
                             name="team"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>
-                                        Description of Requested Service
-                                    </FormLabel>
+                                    <FormLabel>Select Team</FormLabel>
                                     <FormControl>
-                                        <Textarea
-                                            placeholder="Describe your request"
-                                            {...field}
-                                        />
+                                        <Select
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                        >
+                                            <SelectTrigger className="w-full">
+                                                <SelectValue placeholder="Select a team" />
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectItem
+                                                    value={ripple.title}
+                                                >
+                                                    {ripple.title}
+                                                </SelectItem>
+                                                <SelectItem
+                                                    value={breakers.title}
+                                                >
+                                                    {breakers.title}
+                                                </SelectItem>
+                                                <SelectItem
+                                                    value={surges.title}
+                                                >
+                                                    {surges.title}
+                                                </SelectItem>
+                                                <SelectItem
+                                                    value={tsunami.title}
+                                                >
+                                                    {tsunami.title}
+                                                </SelectItem>
+                                            </SelectContent>
+                                        </Select>
                                     </FormControl>
                                     <FormMessage className="text-red-500 text-sm mt-1" />
                                 </FormItem>

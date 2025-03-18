@@ -36,7 +36,7 @@ export default function HomeHero() {
                             variant="cta"
                         />
                         <button
-                            className="bg-transparent hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-6 rounded-lg border-2 border-white transition duration-300"
+                            className="bg-transparent hover:bg-primary text-white font-bold py-2 px-4 rounded-lg border-2 border-white transition duration-300"
                             onClick={() => scrollToElement('about')}
                         >
                             Learn More
