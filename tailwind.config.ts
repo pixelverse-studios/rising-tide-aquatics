@@ -10,52 +10,57 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            maxWidth: {
+                custom: 'var(--max-width)'
+            },
             colors: {
                 primary: {
-                    DEFAULT: 'hsl(var(--primary))',
-                    foreground: 'hsl(var(--primary-foreground))'
+                    DEFAULT: 'var(--primary)',
+                    foreground: 'var(--primary-foreground)'
                 },
                 secondary: {
-                    DEFAULT: 'hsl(var(--secondary))',
-                    foreground: 'hsl(var(--secondary-foreground))'
+                    DEFAULT: 'var(--secondary)',
+                    foreground: 'var(--secondary-foreground)',
+                    nav: 'rgba(98, 155, 197, 0.5)'
                 },
                 accent: {
-                    DEFAULT: 'hsl(var(--secondary))',
-                    foreground: 'hsl(var(--secondary-foreground))'
+                    DEFAULT: 'var(--accent)',
+                    foreground: 'var(--secondary-foreground)'
                 },
                 black: {
                     DEFAULT: 'var(--black)'
                 },
                 white: {
-                    DEFAULT: 'var(--white)'
+                    DEFAULT: 'var(--white)',
+                    bright: '#ffffff'
                 },
-                background: 'hsl(var(--background))',
-                foreground: 'hsl(var(--foreground))',
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
                 card: {
-                    DEFAULT: 'hsl(var(--card))',
-                    foreground: 'hsl(var(--card-foreground))'
+                    DEFAULT: 'var(--card)',
+                    foreground: 'var(--card-foreground)'
                 },
                 popover: {
-                    DEFAULT: 'hsl(var(--popover))',
-                    foreground: 'hsl(var(--popover-foreground))'
+                    DEFAULT: 'var(--popover)',
+                    foreground: 'var(--popover-foreground)'
                 },
                 muted: {
-                    DEFAULT: 'hsl(var(--muted))',
-                    foreground: 'hsl(var(--muted-foreground))'
+                    DEFAULT: 'var(--muted)',
+                    foreground: 'var(--muted-foreground)'
                 },
                 destructive: {
-                    DEFAULT: 'hsl(var(--destructive))',
-                    foreground: 'hsl(var(--destructive-foreground))'
+                    DEFAULT: 'var(--destructive)',
+                    foreground: 'var(--destructive-foreground)'
                 },
-                border: 'hsl(var(--border))',
-                input: 'hsl(var(--input))',
-                ring: 'hsl(var(--ring))',
+                border: 'var(--border)',
+                input: 'var(--input)',
+                ring: 'var(--ring)',
                 chart: {
-                    '1': 'hsl(var(--chart-1))',
-                    '2': 'hsl(var(--chart-2))',
-                    '3': 'hsl(var(--chart-3))',
-                    '4': 'hsl(var(--chart-4))',
-                    '5': 'hsl(var(--chart-5))'
+                    '1': 'var(--chart-1)',
+                    '2': 'var(--chart-2)',
+                    '3': 'var(--chart-3)',
+                    '4': 'var(--chart-4)',
+                    '5': 'var(--chart-5)'
                 }
             },
             borderRadius: {
@@ -72,6 +77,17 @@ const config: Config = {
                     'sans-serif'
                 ],
                 poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif']
+            },
+            fontSize: {
+                sm: '14px',
+                base: '16px',
+                lg: '18px',
+                xl: '22px',
+                '2xl': '26px',
+                '3xl': '30px',
+                '4xl': '36px',
+                '5xl': '40px',
+                '6xl': '44px'
             }
         }
     },

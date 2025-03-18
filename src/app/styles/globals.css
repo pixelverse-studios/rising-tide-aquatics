@@ -16,32 +16,49 @@
     --max-width: 1400px;
 
     /* shadcn ish */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 8px;
+    /* Background Colors */
+    --background: #ffffff; /* HSL(0 0% 100%) */
+    --foreground: #111827; /* HSL(240 10% 3.9%) */
+
+    /* Card Colors */
+    --card: #ffffff; /* HSL(0 0% 100%) */
+    --card-foreground: #111827; /* HSL(240 10% 3.9%) */
+
+    /* Popover Colors */
+    --popover: #ffffff; /* HSL(0 0% 100%) */
+    --popover-foreground: #111827; /* HSL(240 10% 3.9%) */
+
+    /* Primary Colors */
+    --primary-foreground: #f9fafb; /* HSL(0 0% 98%) */
+
+    /* Secondary Colors */
+    --secondary-foreground: #111827; /* HSL(240 5.9% 10%) */
+
+    /* Muted Colors */
+    --muted: #f3f4f6; /* HSL(240 4.8% 95.9%) */
+    --muted-foreground: #6b7280; /* HSL(240 3.8% 46.1%) */
+
+    /* Accent Colors */
+    --accent-foreground: #111827; /* HSL(240 5.9% 10%) */
+
+    /* Destructive Colors */
+    --destructive: #ef4444; /* HSL(0 84.2% 60.2%) */
+    --destructive-foreground: #f9fafb; /* HSL(0 0% 98%) */
+
+    /* Border and Input Colors */
+    --border: #e5e7eb; /* HSL(240 5.9% 90%) */
+    --input: #e5e7eb; /* HSL(240 5.9% 90%) */
+
+    /* Ring Color */
+    --ring: #111827; /* HSL(240 5.9% 10%) */
+
+    /* Radius */
+    --radius: 0.5rem;
 }
 
-html,
-body {
-    height: 100dvh;
-    min-height: 100%;
+html {
+    min-height: 100dvh;
+    height: 100%;
 }
 body {
     display: flex;
@@ -50,6 +67,7 @@ body {
 
 main {
     flex: 1;
+    min-height: 100dvh;
     height: 100%;
 }
 
@@ -80,7 +98,7 @@ main {
     }
     body {
         font-family: 'Poppins', serif;
-        @apply bg-background text-black;
+        @apply bg-background text-primary;
     }
 
     h1,
@@ -88,5 +106,21 @@ main {
     h3,
     h4 {
         font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+        @apply text-3xl font-bold mb-4;
+    }
+
+    h2 {
+        @apply text-2xl font-bold mb-4;
+    }
+
+    h3 {
+        @apply text-xl font-semibold mb-2;
+    }
+
+    h4 {
+        @apply text-base font-semibold;
     }
 }

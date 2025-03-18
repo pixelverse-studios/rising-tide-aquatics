@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, Poppins } from 'next/font/google'
-import FloatingHeader from '@/components/header/FloatingHeader'
+import FloatingHeader from '@/components/nav/floating-header'
+import Footer from '@/components/nav/footer'
 
 export const montserrat = Montserrat({
     subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({
             >
                 <FloatingHeader />
                 {children}
+                <Footer />
             </body>
         </html>
     )
