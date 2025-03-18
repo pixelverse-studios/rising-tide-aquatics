@@ -32,7 +32,10 @@ export default function TeamLevel({
                     <p className="font-semibold">{description}</p>
                     <ul className="grid grid-cols-2 pt-4">
                         {bullets.map(bullet => (
-                            <li className="flex gap-4 items-center">
+                            <li
+                                className="flex gap-4 items-center"
+                                key={bullet}
+                            >
                                 <Check className="text-accent" />
                                 <span>{bullet}</span>
                             </li>
