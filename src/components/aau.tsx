@@ -103,16 +103,18 @@ export default function AAUPage() {
                                     information
                                 </p>
                                 <ul className="flex flex-col gap-4 pt-4">
-                                    <li className={listItemStyles}>
-                                        <Phone className="text-accent" />
-                                        <span>(551) 123-4567</span>
-                                    </li>
-                                    <li className={listItemStyles}>
-                                        <a href={`mailto:${email}`}>
+                                    <a
+                                        href={`mailto:${email}`}
+                                        className="group relative overflow-hidden"
+                                    >
+                                        <li className={listItemStyles}>
                                             <Mail className="text-accent" />
-                                            <span>{email}</span>
-                                        </a>
-                                    </li>
+                                            <span className="relative">
+                                                {email}
+                                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                                            </span>
+                                        </li>
+                                    </a>
                                     <li className={listItemStyles}>
                                         <MapPin className="text-accent" />
                                         <span>{address}</span>
