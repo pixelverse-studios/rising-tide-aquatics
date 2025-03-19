@@ -1,6 +1,7 @@
 import { FaInstagram } from 'react-icons/fa'
 import { Mail } from 'lucide-react'
 
+import { email } from '@/lib/constants'
 import { pageRoutes } from '@/lib/routes'
 import NavItems from './nav-items'
 
@@ -42,7 +43,7 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:TheTampaAquatics@gmail.com">
+                                <a href={`mailto:${email}`}>
                                     <Mail className="h-7 w-7 cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-125" />
                                 </a>
                             </li>

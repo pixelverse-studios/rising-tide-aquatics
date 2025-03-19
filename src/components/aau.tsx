@@ -13,6 +13,7 @@ import { Card, CardHeader, CardContent, CardFooter } from './ui/card'
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
 import CallToAction from './call-to-action'
+import { address, email } from '@/lib/constants'
 
 const listItemStyles = 'flex gap-4 items-center'
 
@@ -107,14 +108,14 @@ export default function AAUPage() {
                                         <span>(551) 123-4567</span>
                                     </li>
                                     <li className={listItemStyles}>
-                                        <Mail className="text-accent" />
-                                        <span>info@swimteam.com</span>
+                                        <a href={`mailto:${email}`}>
+                                            <Mail className="text-accent" />
+                                            <span>{email}</span>
+                                        </a>
                                     </li>
                                     <li className={listItemStyles}>
                                         <MapPin className="text-accent" />
-                                        <span>
-                                            123 Swim Lane, Tampa, FL 12345
-                                        </span>
+                                        <span>{address}</span>
                                     </li>
                                 </ul>
                             </CardContent>
