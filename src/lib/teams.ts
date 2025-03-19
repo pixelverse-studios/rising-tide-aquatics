@@ -38,7 +38,7 @@ export const surges = {
         'Flexibility'
     ],
     description:
-        'Designed for swimmers competeing locally and regionally. This group focuses on stroke technique, race strategy, and endurance. Dryland training builds strength, agility, and flexibility to enhance performance',
+        'Designed for swimmers competing locally and regionally. This group focuses on stroke technique, race strategy, and endurance. Dryland training builds strength, agility, and flexibility to enhance performance',
     difficulty: 'Competitive Level',
     img: '/imgs/surges.svg',
     title: 'Surges Group'
@@ -53,7 +53,7 @@ export const tsunami = {
         'Injury prevention'
     ],
     description:
-        'The hgihest level of training for national and collegiate swimmers, focusing on speed, power, and mental preparation. Dryland sessions include strength, plyometrics, and injury prevention',
+        'The highest level of training for national and collegiate swimmers, focusing on speed, power, and mental preparation. Dryland sessions include strength, plyometrics, and injury prevention',
     difficulty: 'Elite Level',
     img: '/imgs/Tsunamis.svg',
     title: 'Tsunamis Group'

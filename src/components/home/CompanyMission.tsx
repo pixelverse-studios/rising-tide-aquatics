@@ -14,8 +14,8 @@ export default function CompanyMission() {
                         the sport, we empower swimmers to reach their full
                         potential - both in and out of the water. Our dedication
                         to excellence, sportsmanship, and camaraderie fosters a
-                        positive, high-energy environment that inspirres every
-                        member to suceed.
+                        positive, high-energy environment that inspires every
+                        member to succeed.
                     </p>
                 </div>
                 <img

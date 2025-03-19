@@ -40,7 +40,7 @@ export default function AAUPage() {
                                         Take your swimming journey to the next
                                         level! Join our competitive AAU swim
                                         team and train with experienced coaches
-                                        ni state-of-the-art facilities
+                                        in state-of-the-art facilities
                                     </p>
                                     <ul className="flex flex-col gap-4 pt-4">
                                         <li className={cn(listItemStyles)}>
