@@ -4,22 +4,21 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
-import { useSmoothScroll } from '@/lib/hooks/useSmoothScroll'
-
 interface NavItemProps {
     items: { destination: string; label: string }[]
     containerClass?: string
     itemClass?: string
     footer: boolean
+    handleClick?: (e: React.MouseEvent<HTMLAnchorElement>, to: string) => void
 }
 
 export default function NavItems({
     items,
     containerClass,
     itemClass,
-    footer
+    footer,
+    handleClick
 }: NavItemProps) {
-    const { handleNavClick } = useSmoothScroll()
     const [hoveredIndex, setHoveredIndex] = useState<any>(null)
 
     return (
@@ -36,12 +35,9 @@ export default function NavItems({
                 >
                     <Link
                         href={item.destination}
-                        onClick={e =>
-                            handleNavClick(e, item.destination, {
-                                behavior: 'smooth',
-                                block: 'start'
-                            })
-                        }
+                        onClick={e => {
+                            if (handleClick) handleClick(e, item.destination)
+                        }}
                         className={cn(
                             'block py-1 transition-scale duration-300 ease-in-out',
                             footer ? 'hover:scale-125' : ''

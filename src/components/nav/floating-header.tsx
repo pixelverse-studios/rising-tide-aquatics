@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+// import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { pageRoutes } from '@/lib/routes'
 import { useSmoothScroll } from '@/lib/hooks/useSmoothScroll'
@@ -10,7 +10,7 @@ import { Menu, X } from 'lucide-react'
 
 export default function FloatingHeader() {
     const { handleNavClick } = useSmoothScroll()
-    const [hoveredIndex, setHoveredIndex] = useState<any>(null)
+    // const [hoveredIndex, setHoveredIndex] = useState<any>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleClick = (
@@ -61,7 +61,11 @@ export default function FloatingHeader() {
 
             {/* Desktop navigation */}
             <div className="hidden md:flex items-center gap-6">
-                <NavItems items={pageRoutes} footer={false} />
+                <NavItems
+                    handleClick={handleClick}
+                    items={pageRoutes}
+                    footer={false}
+                />
                 <CallToAction
                     buttonLabel="Contact"
                     buttonClass="text-white text-xl"
@@ -70,13 +74,18 @@ export default function FloatingHeader() {
             </div>
 
             {/* Mobile hamburger button */}
-            <button
-                className="md:hidden flex items-center justify-center p-2 rounded-md transition-colors duration-200 hover:bg-opacity hover:bg-primary menu-toggle"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            >
-                <Menu className="w-6 h-6 text-white" />
-            </button>
+            <div className="md:hidden w-full flex items-center justify-between">
+                <span className="md:hidden text-2xl text-white">
+                    Tampa Aquatic
+                </span>
+                <button
+                    className="md:hidden flex items-center justify-center p-2 rounded-md transition-colors duration-200 hover:bg-opacity hover:bg-primary menu-toggle"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                >
+                    <Menu className="w-6 h-6 text-white" />
+                </button>
+            </div>
 
             {/* Mobile navigation overlay */}
             <div
@@ -91,7 +100,7 @@ export default function FloatingHeader() {
                 className={`md:hidden fixed top-0 right-0 bg-secondary rounded-lg shadow-2xl p-6 transition-all duration-300 ease-in-out transform mobile-menu w-full ${
                     isMenuOpen
                         ? 'translate-y-0 opacity-100 z-50'
-                        : 'translate-y-full opacity-0 -z-10'
+                        : '-translate-y-full opacity-0 -z-10'
                 }`}
                 onClick={e => e.stopPropagation()}
             >
@@ -110,6 +119,7 @@ export default function FloatingHeader() {
                         containerClass="flex-col"
                         itemClass="w-fit"
                         footer={false}
+                        handleClick={handleClick}
                     />
                     <div className="mt-2">
                         <CallToAction
