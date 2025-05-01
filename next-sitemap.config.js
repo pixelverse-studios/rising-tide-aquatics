@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.tampaaquatic.com',
+    siteUrl: 'https://www.risingtideaquatics.com',
     generateRobotsTxt: true
 }

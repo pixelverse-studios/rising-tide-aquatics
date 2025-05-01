@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.tampaaquatic.com
+Host: https://www.risingtideaquatics.com
 
 # Sitemaps
-Sitemap: https://www.tampaaquatic.com/sitemap.xml
+Sitemap: https://www.risingtideaquatics.com/sitemap.xml
