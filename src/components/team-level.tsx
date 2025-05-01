@@ -22,12 +22,14 @@ export default function TeamLevel({
     invert
 }: TeamLevelProps) {
     return (
-        <section id="teams" className={invert ? 'bg-white-bright' : 'bg-white'}>
+        <section id="teams" className={invert ? 'bg-primary' : 'bg-black'}>
             <AnimatedSection animation="fadeIn">
                 <div
                     className={cn(
                         'max-w-custom mx-auto px-6 py-12 items-center grid grid-cols-1 lg:grid-cols-2 gap-6',
-                        invert ? 'lg:grid-cols-[1fr_1fr]' : ''
+                        invert
+                            ? 'lg:grid-cols-[1fr_1fr] text-black'
+                            : 'text-primary'
                     )}
                 >
                     <div className={invert ? 'lg:order-2' : ''}>
@@ -40,7 +42,7 @@ export default function TeamLevel({
                                     className="flex gap-4 items-center"
                                     key={bullet}
                                 >
-                                    <Check className="text-accent" />
+                                    <Check />
                                     <span>{bullet}</span>
                                 </li>
                             ))}

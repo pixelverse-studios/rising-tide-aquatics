@@ -22,7 +22,7 @@ export const poppins = Poppins({
 import './styles/globals.css'
 
 export const metadata = {
-    title: 'Tampa Aquatic',
+    title: 'Rising Tide Aquatics',
     description:
         'A trusted youth swim team, aiming to grow, based in the Tampa Florida area.',
     icons: {

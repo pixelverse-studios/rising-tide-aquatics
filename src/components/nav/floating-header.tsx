@@ -9,7 +9,7 @@ import NavItems from './nav-items'
 import { Menu, X } from 'lucide-react'
 
 export default function FloatingHeader() {
-    const { handleNavClick } = useSmoothScroll()
+    const { handleNavClick, scrollToPosition } = useSmoothScroll()
     // const [hoveredIndex, setHoveredIndex] = useState<any>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -23,6 +23,8 @@ export default function FloatingHeader() {
         })
         setIsMenuOpen(false)
     }
+
+    const handleLogoClick = () => scrollToPosition(0)
 
     // Close menu when resizing to desktop or clicking outside
     useEffect(() => {
@@ -61,6 +63,12 @@ export default function FloatingHeader() {
 
             {/* Desktop navigation */}
             <div className="hidden md:flex items-center gap-6">
+                <img
+                    src="/imgs/Logo.png"
+                    alt="Logo"
+                    className="h-auto w-20 rounded-lg mr-4 cursor-pointer"
+                    onClick={handleLogoClick}
+                />
                 <NavItems
                     handleClick={handleClick}
                     items={pageRoutes}
@@ -76,7 +84,7 @@ export default function FloatingHeader() {
             {/* Mobile hamburger button */}
             <div className="md:hidden w-full flex items-center justify-between">
                 <span className="md:hidden text-2xl text-white">
-                    Tampa Aquatic
+                    Rising Tide Aquatics
                 </span>
                 <button
                     className="md:hidden flex items-center justify-center p-2 rounded-md transition-colors duration-200 hover:bg-opacity hover:bg-primary menu-toggle"

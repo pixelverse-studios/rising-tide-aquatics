@@ -9,14 +9,15 @@ export default function Footer() {
     const year = new Date().getFullYear()
 
     return (
-        <footer className="bg-primary text-white">
+        <footer className="bg-black text-primary">
             <div className="max-w-custom mx-auto px-6 py-8 flex flex-col gap-2">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                        <div className="w-fit text-center">
-                            <img src="/imgs/LogoCap.svg" alt="logo" />
-                            <p className="text- font-bold">Tampa Aquatics</p>
-                        </div>
+                    <div className="mx-auto">
+                        <img
+                            src="/imgs/Logo.png"
+                            alt="logo"
+                            className="h-auto w-[18rem]"
+                        />
                     </div>
                     <div>
                         <p className="text-xl font-semibold pb-4">
@@ -26,7 +27,7 @@ export default function Footer() {
                             footer
                             items={pageRoutes}
                             containerClass="flex-col gap-4 w-fit"
-                            itemClass="ml-2 text-lg"
+                            itemClass="ml-2 text-lg text-primary"
                         />
                     </div>
                     <div>
@@ -36,7 +37,7 @@ export default function Footer() {
                         <ul className="flex gap-4 items-center">
                             <li>
                                 <a
-                                    href="https://www.instagram.com/tampaaquatics/"
+                                    href="https://www.instagram.com/risingtideaquatics/"
                                     target="_blank"
                                 >
                                     <FaInstagram className="text-2xl cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-125" />
@@ -50,8 +51,8 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="mt-4 py-6 border-t-2 border-t-white text-center">
-                    {year} Tampa Aquatics. All rights reserved.
+                <div className="mt-4 py-6 border-t-2 border-t-primary text-center">
+                    {year} Rising Tide Aquatics. All rights reserved.
                 </div>
             </div>
         </footer>

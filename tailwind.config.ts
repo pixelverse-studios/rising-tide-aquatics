@@ -21,7 +21,7 @@ const config: Config = {
                 secondary: {
                     DEFAULT: 'var(--secondary)',
                     foreground: 'var(--secondary-foreground)',
-                    nav: 'rgba(98, 155, 197, 0.5)'
+                    nav: 'rgb(56 58 56 / 50%)'
                 },
                 accent: {
                     DEFAULT: 'var(--accent)',

@@ -19,19 +19,22 @@ const listItemStyles = 'flex gap-4 items-center'
 
 export default function AAUPage() {
     return (
-        <section id="aau" className="bg-white scroll-mt-[3rem]">
+        <section
+            id="aau"
+            className="scroll-mt-[3rem] bg-gradient-to-b from-secondary from-[0%] via-primary via-[45%] to-primary to-[100%]"
+        >
             <AnimatedSection animation="fadeIn">
                 <div className="max-w-custom mx-auto px-6 py-8">
-                    <h2 className="text-center">
-                        Become a Member of Tampa Aquatics
+                    <h2 className="text-center text-white">
+                        Become a Member of Rising Tide Aquatics
                     </h2>
-                    <div className="h-1 w-20 bg-primary mx-auto" />
+                    <div className="h-1 w-20 bg-white mx-auto" />
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
                         <div className="flex flex-col gap-6">
-                            <Card className="bg-primary text-white shadow-xl">
+                            <Card className="bg-primary text-black shadow-xl border-black">
                                 <CardHeader>
-                                    <div className="bg-accent p-4 rounded-full w-fit mb-2">
-                                        <Trophy className="text-white" />
+                                    <div className="bg-black p-4 rounded-full w-fit mb-2">
+                                        <Trophy className="text-primary" />
                                     </div>
                                     <h3>Join Our AAU Team!</h3>
                                 </CardHeader>
@@ -46,19 +49,19 @@ export default function AAUPage() {
                                         </p>
                                         <ul className="flex flex-col gap-4 pt-4">
                                             <li className={cn(listItemStyles)}>
-                                                <Check className="text-accent" />
+                                                <Check className="text-black" />
                                                 <span>
                                                     Professional coaching staff
                                                 </span>
                                             </li>
                                             <li className={cn(listItemStyles)}>
-                                                <Check className="text-accent" />
+                                                <Check className="text-black" />
                                                 <span>
                                                     Structured training programs
                                                 </span>
                                             </li>
                                             <li className={cn(listItemStyles)}>
-                                                <Check className="text-accent" />
+                                                <Check className="text-black" />
                                                 <span>
                                                     Competition opportunities
                                                 </span>
@@ -84,19 +87,21 @@ export default function AAUPage() {
                                     >
                                         <Button
                                             variant="ctaAlt"
-                                            className="rounded-full font-semibold w-full"
+                                            className="rounded-full font-semibold w-full px-6"
                                         >
                                             Register Now <ArrowRight />
                                         </Button>
                                     </a>
                                 </CardFooter>
                             </Card>
-                            <Card className="bg-primary text-white">
+                            <Card className="bg-primary text-black border-black">
                                 <CardHeader>
-                                    <div className="bg-accent p-4 rounded-full w-fit mb-2">
-                                        <MessageSquare className="text-white" />
+                                    <div className="bg-black p-4 rounded-full w-fit mb-2">
+                                        <MessageSquare className="text-primary" />
                                     </div>
-                                    <h3>Learn More About Tampa Aquatics</h3>
+                                    <h3>
+                                        Learn More About Rising Tide Aquatics
+                                    </h3>
                                 </CardHeader>
                                 <CardContent className="">
                                     <p>
@@ -111,15 +116,15 @@ export default function AAUPage() {
                                             className="group relative overflow-hidden"
                                         >
                                             <li className={listItemStyles}>
-                                                <Mail className="text-accent" />
+                                                <Mail className="text-black" />
                                                 <span className="relative">
                                                     {email}
-                                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
                                                 </span>
                                             </li>
                                         </a>
                                         <li className={listItemStyles}>
-                                            <MapPin className="text-accent" />
+                                            <MapPin className="text-black" />
                                             <span>{address}</span>
                                         </li>
                                     </ul>
@@ -128,7 +133,7 @@ export default function AAUPage() {
                                     <CallToAction
                                         buttonLabel="Contact Us"
                                         variant="ctaAlt"
-                                        buttonClass="rounded-full w-full sm:w-fit"
+                                        buttonClass="rounded-full w-full sm:w-fit px-6"
                                     />
                                 </CardFooter>
                             </Card>

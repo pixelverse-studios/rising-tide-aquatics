@@ -5,12 +5,12 @@
 @tailwind utilities;
 
 :root {
-    --primary: #3b5070;
-    --secondary: #629bc5;
+    --primary: #ccab56;
+    --secondary: #040403;
     --accent: #ee272a;
 
     --white: #f9fcff;
-    --black: #5a5a5a;
+    --black: #040403;
     --border-radius: 8px;
 
     --max-width: 1400px;
@@ -78,6 +78,12 @@ main {
 }
 
 @layer base {
+    html {
+        @apply bg-black;
+    }
+    body {
+        @apply text-lg font-medium;
+    }
     h1 {
         @apply text-3xl font-bold;
     }
