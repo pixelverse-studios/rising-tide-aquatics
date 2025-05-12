@@ -34,6 +34,7 @@ const config: Config = {
                     DEFAULT: 'var(--white)',
                     bright: '#ffffff'
                 },
+                gray: { dark: 'var(--dark-gray)', light: 'var(--light-gray)' },
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
                 card: {

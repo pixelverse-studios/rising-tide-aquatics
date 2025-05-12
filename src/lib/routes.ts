@@ -8,6 +8,10 @@ export const pageRoutes = [
         destination: 'about'
     },
     {
+        label: 'New For Summer',
+        destination: 'announcement'
+    },
+    {
         label: 'Teams',
         destination: 'teams'
     },

@@ -1,5 +1,6 @@
 import HomeHero from '@/components/home/Hero'
 import CompanyMission from '@/components/home/CompanyMission'
+import AnnouncementBanner from '@/components/home/AnnouncementBanner'
 import TeamLevel from '@/components/team-level'
 import AAUPage from '@/components/aau'
 
@@ -10,6 +11,7 @@ export default function Home() {
         <main>
             <HomeHero />
             <CompanyMission />
+            <AnnouncementBanner />
             <section id="teams">
                 <TeamLevel {...ripple} invert={false} />
                 <TeamLevel {...breakers} invert />
