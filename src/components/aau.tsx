@@ -21,7 +21,7 @@ export default function AAUPage() {
     return (
         <section
             id="aau"
-            className="scroll-mt-[3rem] bg-gradient-to-b from-secondary from-[0%] via-primary via-[45%] to-primary to-[100%]"
+            className="scroll-mt-[3rem] bg-gradient-to-b from-secondary from-[0%] via-primary via-[45%] to-primary to-[100%] scroll-mt-20"
         >
             <AnimatedSection animation="fadeIn">
                 <div className="max-w-custom mx-auto px-6 py-8">

@@ -83,9 +83,12 @@ export default function FloatingHeader() {
 
             {/* Mobile hamburger button */}
             <div className="md:hidden w-full flex items-center justify-between">
-                <span className="md:hidden text-2xl text-white">
-                    Rising Tide Aquatics
-                </span>
+                <img
+                    src="/imgs/Logo.png"
+                    alt="Logo"
+                    className="h-auto w-20 rounded-lg mr-4 cursor-pointer"
+                    onClick={handleLogoClick}
+                />
                 <button
                     className="md:hidden flex items-center justify-center p-2 rounded-md transition-colors duration-200 hover:bg-opacity hover:bg-primary menu-toggle"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -112,7 +115,7 @@ export default function FloatingHeader() {
                 }`}
                 onClick={e => e.stopPropagation()}
             >
-                <div className="flex justify-end items-end mb-4">
+                <div className="flex justify-end items-end mb-4 absolute right-[2rem] top-[2.5rem]">
                     <button
                         className="p-1 rounded-full hover:bg-primary hover:bg-opacity-10 transition-colors"
                         onClick={() => setIsMenuOpen(false)}
@@ -122,6 +125,12 @@ export default function FloatingHeader() {
                     </button>
                 </div>
                 <div className="flex flex-col gap-4">
+                    <img
+                        src="/imgs/Logo.png"
+                        alt="Logo"
+                        className="h-auto w-20 rounded-lg mr-4 cursor-pointer"
+                        onClick={handleLogoClick}
+                    />
                     <NavItems
                         items={pageRoutes}
                         containerClass="flex-col"

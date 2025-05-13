@@ -4,7 +4,7 @@ import AnimatedSection from '../animated-section'
 
 export default function CompanyMission() {
     return (
-        <section id="about" className="bg-black">
+        <section id="about" className="bg-black scroll-mt-20">
             <AnimatedSection animation="fadeIn">
                 <section className="bg-black relative w-full">
                     <div className="max-w-custom mx-auto px-6 pt-10 pb-32">

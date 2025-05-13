@@ -16,7 +16,7 @@ export default function AnnouncementBanner() {
         <section id="announcement" className="bg-gray-dark">
             <AnimatedSection
                 animation="fadeIn"
-                className="max-w-custom mx-auto px-6 py-12 flex flex-col gap-2"
+                className="max-w-custom mx-auto px-6 py-12 flex flex-col gap-2 scroll-mt-20"
             >
                 <h2 className="text-center mb-0">New For Summer 2025!</h2>
                 <p className="text-center text-xl mb-6">
@@ -99,7 +99,7 @@ export default function AnnouncementBanner() {
                         <CallToAction
                             buttonLabel="Claim Your Spot"
                             variant="cta"
-                            buttonClass="w-[20rem] mx-auto text-black"
+                            buttonClass="w-[clamp(15rem,50vw,20rem)] mx-auto text-black"
                         />
                         <p>
                             Only 5 swimmers per group. Registration closes soon

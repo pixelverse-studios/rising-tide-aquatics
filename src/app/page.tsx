@@ -12,7 +12,7 @@ export default function Home() {
             <HomeHero />
             <CompanyMission />
             <AnnouncementBanner />
-            <section id="teams">
+            <section id="teams" className="scroll-mt-20">
                 <TeamLevel {...ripple} invert={false} />
                 <TeamLevel {...breakers} invert />
                 <TeamLevel {...surges} invert={false} />
