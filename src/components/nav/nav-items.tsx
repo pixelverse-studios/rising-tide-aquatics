@@ -27,7 +27,7 @@ export default function NavItems({
                 <li
                     key={index}
                     className={cn(
-                        'text-xl text-white font-bold relative',
+                        'text-xl text-white font-bold relative flex items-end',
                         itemClass ?? ''
                     )}
                     onMouseEnter={() => setHoveredIndex(index)}

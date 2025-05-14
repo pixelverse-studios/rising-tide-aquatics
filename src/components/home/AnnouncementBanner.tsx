@@ -100,6 +100,7 @@ export default function AnnouncementBanner() {
                             buttonLabel="Claim Your Spot"
                             variant="cta"
                             buttonClass="w-[clamp(15rem,50vw,20rem)] mx-auto text-black"
+                            hideSelect
                         />
                         <p>
                             Only 5 swimmers per group. Registration closes soon

@@ -12,13 +12,15 @@ interface CallToActionProps {
     buttonClass?: string
     round?: boolean
     variant: any
+    hideSelect: boolean
 }
 
 export default function CallToAction({
     buttonLabel,
     buttonClass,
     round,
-    variant
+    variant,
+    hideSelect = false
 }: CallToActionProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [showForm, setShowForm] = useState(true)
@@ -58,7 +60,10 @@ export default function CallToAction({
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3, ease: 'easeInOut' }}
                         >
-                            <ContactForm setShowForm={setShowForm} />
+                            <ContactForm
+                                setShowForm={setShowForm}
+                                hideSelect={hideSelect}
+                            />
                         </motion.div>
                     ) : (
                         <motion.div
