@@ -12,7 +12,7 @@ interface CallToActionProps {
     buttonClass?: string
     round?: boolean
     variant: any
-    hideSelect: boolean
+    hideSelect?: boolean
 }
 
 export default function CallToAction({
